@@ -1,0 +1,10 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(pdftotext -layout \"D:\\\\PQC_Agent\\\\PQC_Agent\\\\offical\\\\05_china_related\\\\CTRU.pdf\" -)",
+      "Bash(pdftotext -layout \"D:\\\\PQC_Agent\\\\PQC_Agent\\\\offical\\\\05_china_related\\\\NEV.pdf\" -)",
+      "Bash(pdftotext -layout \"D:\\\\PQC_Agent\\\\PQC_Agent\\\\offical\\\\05_china_related\\\\Scloud+.pdf\" -)",
+      "Bash(pdftotext -layout \"D:\\\\PQC_Agent\\\\PQC_Agent\\\\offical\\\\05_china_related\\\\基于NTRU的密钥封装机制-征求意见稿.pdf\" -)"
+    ]
+  }
+}

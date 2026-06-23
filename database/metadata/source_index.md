@@ -1,0 +1,587 @@
+# Source Index
+This index records what each PDF in the uploaded `offical.zip` corpus may and may not be used for. It is designed to prevent the tutor agent from using survey notes as authoritative standards or inventing numeric claims.
+## Tier definitions
+- **Tier 0**: official NIST FIPS/SP/IR documents or NIST status material. Use for standards, standardization status, approved parameters, and migration guidance.
+- **Tier 1**: algorithm specifications for selected future standards or NIST additional-signature candidates. Use for candidate/spec details, not for claiming final standardization.
+- **Tier 2**: China-related papers, presentations, comments, or algorithm notes. Use for domestic algorithm context and research directions, not as NIST/FIPS authority.
+- **Tier 3**: surveys and general guides. Use for background explanation only; do not use as sole source for exact parameters or benchmark claims.
+
+## 01_nist_standards
+### NIST_FIPS_203_ML-KEM_2024.pdf
+- file: `01_nist_standards/NIST_FIPS_203_ML-KEM_2024.pdf`
+- type: `official_standard`
+- trust_tier: **Tier 0**
+- pages: 56
+- size_bytes: 1252341
+- sha256: `fe1f12f32a7e44ec9fdebbf400cda843a40b506dee676725234dc6f7923b6cac`
+- source_url: https://nvlpubs.nist.gov/nistpubs/FIPS/NIST.FIPS.203.pdf
+- notes: Official NIST ML-KEM standard.
+- use_for:
+  - ML-KEM official parameter sets
+  - ML-KEM KeyGen / Encaps / Decaps algorithms
+  - ML-KEM key and ciphertext sizes
+  - ML-KEM validation and usage requirements
+- do_not_use_for:
+  - hardware benchmark numbers
+  - non-standard algorithm variants
+  - claims about fastest or smallest implementation
+### NIST_FIPS_204_ML-DSA_2024.pdf
+- file: `01_nist_standards/NIST_FIPS_204_ML-DSA_2024.pdf`
+- type: `official_standard`
+- trust_tier: **Tier 0**
+- pages: 65
+- size_bytes: 3291746
+- sha256: `57239b9f84c03227eda3ca0991204dc7764c79af9ce2e6824eda774918d46b6b`
+- source_url: https://nvlpubs.nist.gov/nistpubs/FIPS/NIST.FIPS.204.pdf
+- notes: Official NIST ML-DSA standard.
+- use_for:
+  - ML-DSA official parameter sets
+  - ML-DSA KeyGen / Sign / Verify algorithms
+  - ML-DSA key and signature sizes
+  - ML-DSA validation and usage requirements
+- do_not_use_for:
+  - hardware benchmark numbers
+  - Dilithium legacy differences unless explicitly cited
+  - claims about fastest or smallest implementation
+### NIST_FIPS_205_SLH-DSA_2024.pdf
+- file: `01_nist_standards/NIST_FIPS_205_SLH-DSA_2024.pdf`
+- type: `official_standard`
+- trust_tier: **Tier 0**
+- pages: 61
+- size_bytes: 1055752
+- sha256: `8ef34228276f3386d23cb0da8c14592b8cfb0db3358016bba64df7a004f8d13d`
+- source_url: https://nvlpubs.nist.gov/nistpubs/FIPS/NIST.FIPS.205.pdf
+- notes: Official NIST SLH-DSA standard.
+- use_for:
+  - SLH-DSA official parameter sets
+  - SLH-DSA key and signature sizes
+  - stateless hash-based signature construction
+- do_not_use_for:
+  - ML-KEM or ML-DSA facts
+  - hardware benchmark numbers
+### NIST_SP_800-227_KEM_Recommendations_2025.pdf
+- file: `01_nist_standards/NIST_SP_800-227_KEM_Recommendations_2025.pdf`
+- type: `nist_recommendation`
+- trust_tier: **Tier 0**
+- pages: 64
+- size_bytes: 902987
+- sha256: `41e427a461c1ae0ceed2a68dc29507400983d1d495c35631306d0f4803ca4614`
+- source_url: https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-227.pdf
+- notes: NIST recommendations for KEMs.
+- use_for:
+  - KEM deployment recommendations
+  - KEM security notions and integration guidance
+  - hybrid/composite KEM usage guidance
+- do_not_use_for:
+  - algorithm-specific parameters unless the document explicitly states them
+  - hardware benchmark numbers
+
+## 02_nist_reports_migration
+### NIST_IR_8105_Report_on_PQC_2016.pdf
+- file: `02_nist_reports_migration/NIST_IR_8105_Report_on_PQC_2016.pdf`
+- type: `nist_status_or_migration_report`
+- trust_tier: **Tier 0**
+- pages: 15
+- size_bytes: 199673
+- sha256: `da3c1c6915e4043131a901d487c7a06de3b88d2e05ffe8a083e800f4e752559a`
+- source_url: https://nvlpubs.nist.gov/nistpubs/ir/2016/nist.ir.8105.pdf
+- notes: NIST early report on PQC.
+- use_for:
+  - NIST process status as of the report date
+  - standardization rationale
+  - migration/adoption guidance
+- do_not_use_for:
+  - final standard parameters if superseded by FIPS
+  - current status after the report date without verification
+  - hardware benchmark numbers
+### NIST_IR_8413_Third_Round_Status_2022.pdf
+- file: `02_nist_reports_migration/NIST_IR_8413_Third_Round_Status_2022.pdf`
+- type: `nist_status_or_migration_report`
+- trust_tier: **Tier 0**
+- pages: 100
+- size_bytes: 1508856
+- sha256: `488d61bead4fd81aaa69fd811431e4d87a1b64598fcf668c79bc8c3c2fbfa79e`
+- source_url: https://nvlpubs.nist.gov/nistpubs/ir/2022/NIST.IR.8413-upd1.pdf
+- notes: NIST third-round status report.
+- use_for:
+  - NIST process status as of the report date
+  - standardization rationale
+  - migration/adoption guidance
+- do_not_use_for:
+  - final standard parameters if superseded by FIPS
+  - current status after the report date without verification
+  - hardware benchmark numbers
+### NIST_IR_8528_Additional_Signatures_Round1_Status_2024.pdf
+- file: `02_nist_reports_migration/NIST_IR_8528_Additional_Signatures_Round1_Status_2024.pdf`
+- type: `nist_status_or_migration_report`
+- trust_tier: **Tier 0**
+- pages: 30
+- size_bytes: 499763
+- sha256: `3c0480d43da8c7cda80237c0c92481655a23339649828212fe59a0a76a78031f`
+- source_url: https://nvlpubs.nist.gov/nistpubs/ir/2024/NIST.IR.8528.pdf
+- notes: NIST additional digital signatures round 1 status report.
+- use_for:
+  - NIST process status as of the report date
+  - standardization rationale
+  - migration/adoption guidance
+- do_not_use_for:
+  - final standard parameters if superseded by FIPS
+  - current status after the report date without verification
+  - hardware benchmark numbers
+### NIST_IR_8545_Fourth_Round_Status_HQC_2025.pdf
+- file: `02_nist_reports_migration/NIST_IR_8545_Fourth_Round_Status_HQC_2025.pdf`
+- type: `nist_status_or_migration_report`
+- trust_tier: **Tier 0**
+- pages: 34
+- size_bytes: 588999
+- sha256: `d802f4849a52d18001533cef86e0950f31350643cc06881ee62b2382e1ea0e9d`
+- source_url: https://nvlpubs.nist.gov/nistpubs/ir/2025/NIST.IR.8545.pdf
+- notes: NIST fourth-round status report; HQC selected.
+- use_for:
+  - NIST process status as of the report date
+  - standardization rationale
+  - migration/adoption guidance
+- do_not_use_for:
+  - final standard parameters if superseded by FIPS
+  - current status after the report date without verification
+  - hardware benchmark numbers
+### NIST_IR_8547_ipd_Transition_to_PQC_Standards_2024.pdf
+- file: `02_nist_reports_migration/NIST_IR_8547_ipd_Transition_to_PQC_Standards_2024.pdf`
+- type: `nist_status_or_migration_report`
+- trust_tier: **Tier 0**
+- pages: 29
+- size_bytes: 722379
+- sha256: `6b551b4ff9858a19c1ab48d7deef2ee52d615066b7d187aaf992cb50c5ca0ed6`
+- source_url: https://nvlpubs.nist.gov/nistpubs/ir/2024/NIST.IR.8547.ipd.pdf
+- notes: Initial public draft on transition to PQC standards.
+- use_for:
+  - NIST process status as of the report date
+  - standardization rationale
+  - migration/adoption guidance
+- do_not_use_for:
+  - final standard parameters if superseded by FIPS
+  - current status after the report date without verification
+  - hardware benchmark numbers
+### NIST_IR_8610_Additional_Signatures_Round2_Status_2026.pdf
+- file: `02_nist_reports_migration/NIST_IR_8610_Additional_Signatures_Round2_Status_2026.pdf`
+- type: `nist_status_or_migration_report`
+- trust_tier: **Tier 0**
+- pages: 38
+- size_bytes: 389348
+- sha256: `580b6f434eb3b617fcf07a2c8ef244d51899313d847eb9583136d602c9b9a068`
+- source_url: https://nvlpubs.nist.gov/nistpubs/ir/2026/NIST.IR.8610.pdf
+- notes: NIST additional digital signatures round 2 status report.
+- use_for:
+  - NIST process status as of the report date
+  - standardization rationale
+  - migration/adoption guidance
+- do_not_use_for:
+  - final standard parameters if superseded by FIPS
+  - current status after the report date without verification
+  - hardware benchmark numbers
+
+## 03_selected_future_standards
+### FIPS_206_FN-DSA_status_presentation_2025.pdf
+- file: `03_selected_future_standards/FIPS_206_FN-DSA_status_presentation_2025.pdf`
+- type: `nist_status_presentation`
+- trust_tier: **Tier 0 / status only**
+- pages: 12
+- size_bytes: 546943
+- sha256: `ee10fa43f377ed82f438657c7e33d96f21e90075ca608f488e3c1ce611fb9f36`
+- source_url: https://csrc.nist.gov/csrc/media/Presentations/2025/psmw-fips-206-status/images-media/2025-pqcf-fips206-status-ducas-beullens.pdf
+- notes: NIST presentation on FIPS 206 / FN-DSA status.
+- use_for:
+  - FIPS 206 / FN-DSA status context
+- do_not_use_for:
+  - final FIPS 206 normative requirements unless a final FIPS document is present
+### Falcon_specification_falcon-sign_2020.pdf
+- file: `03_selected_future_standards/Falcon_specification_falcon-sign_2020.pdf`
+- type: `selected_future_standard_specification`
+- trust_tier: **Tier 1**
+- pages: 67
+- size_bytes: 382156
+- sha256: `f887f3f9f367c664fb36639a830bf24390f19b3505abeac2e2c076fd1ad6c6f3`
+- source_url: https://falcon-sign.info/falcon.pdf
+- notes: Falcon signature scheme specification.
+- use_for:
+  - Falcon/FN-DSA algorithm intuition and specification details
+  - future-standard context before final FIPS publication
+- do_not_use_for:
+  - claiming Falcon is already a final FIPS standard unless FIPS 206 is present
+  - unconditional comparison with ML-DSA
+### HQC_specification_2025-08-22.pdf
+- file: `03_selected_future_standards/HQC_specification_2025-08-22.pdf`
+- type: `selected_future_standard_specification`
+- trust_tier: **Tier 1**
+- pages: 51
+- size_bytes: 876126
+- sha256: `174186cb5fdc0108aad914391360c222f52ea533bfb406146fac124b3a25406d`
+- source_url: https://pqc-hqc.org/doc/hqc-specification_2025-08-22.pdf
+- notes: HQC specification after selection for standardization.
+- use_for:
+  - HQC algorithm specification
+  - code-based KEM teaching material
+  - future-standard context after NIST selection
+- do_not_use_for:
+  - claiming HQC is already a final FIPS standard unless final FIPS is present
+  - hardware benchmark numbers
+
+## 04_nist_additional_signatures_round3
+### FAEST_v2_specification_2025.pdf
+- file: `04_nist_additional_signatures_round3/FAEST_v2_specification_2025.pdf`
+- type: `nist_additional_signature_candidate_specification`
+- trust_tier: **Tier 1**
+- pages: 111
+- size_bytes: 1237694
+- sha256: `37ab53a919b1aca9ac90771519a0caa08592eb4cb2a0e3bc118b5e3014b52dad`
+- source_url: https://faest.info/downloads/FAEST_Specification_v2.0.pdf
+- notes: Additional signatures candidate specification.
+- use_for:
+  - candidate algorithm overview
+  - candidate-specific parameters only when directly extracted
+  - teaching comparisons among additional signature families
+- do_not_use_for:
+  - claiming this candidate is standardized
+  - performance or security ranking without source
+  - hardware benchmark numbers unless a benchmark table is cited
+### HAWK_v1.1_specification.pdf
+- file: `04_nist_additional_signatures_round3/HAWK_v1.1_specification.pdf`
+- type: `nist_additional_signature_candidate_specification`
+- trust_tier: **Tier 1**
+- pages: 71
+- size_bytes: 1065697
+- sha256: `e7cf32f8a81fec2795858a4b031c4a94e61e8e766e0960a6c64c181872c7d0fb`
+- source_url: https://hawk-sign.info/hawk-spec.pdf
+- notes: Additional signatures candidate specification.
+- use_for:
+  - candidate algorithm overview
+  - candidate-specific parameters only when directly extracted
+  - teaching comparisons among additional signature families
+- do_not_use_for:
+  - claiming this candidate is standardized
+  - performance or security ranking without source
+  - hardware benchmark numbers unless a benchmark table is cited
+### MAYO_round2_specification_2025.pdf
+- file: `04_nist_additional_signatures_round3/MAYO_round2_specification_2025.pdf`
+- type: `nist_additional_signature_candidate_specification`
+- trust_tier: **Tier 1**
+- pages: 38
+- size_bytes: 625552
+- sha256: `d9c4c80fa1b9e1e0c3d52d1e9420302648db2732bec3967a57dedd9c02c9d547`
+- source_url: https://csrc.nist.gov/CSRC/media/Projects/pqc-dig-sig/documents/round-2/spec-files/MAYO-spec-web.pdf
+- notes: Additional signatures candidate specification.
+- use_for:
+  - candidate algorithm overview
+  - candidate-specific parameters only when directly extracted
+  - teaching comparisons among additional signature families
+- do_not_use_for:
+  - claiming this candidate is standardized
+  - performance or security ranking without source
+  - hardware benchmark numbers unless a benchmark table is cited
+### MQOM_round2_specification_2025.pdf
+- file: `04_nist_additional_signatures_round3/MQOM_round2_specification_2025.pdf`
+- type: `nist_additional_signature_candidate_specification`
+- trust_tier: **Tier 1**
+- pages: 64
+- size_bytes: 699203
+- sha256: `805ef9529287c2bd266acfdc1d79cacb22ab0c25a28208ddd9d2f6aa61a9b085`
+- source_url: https://csrc.nist.gov/CSRC/media/Projects/pqc-dig-sig/documents/round-2/spec-files/MQOM-spec-web.pdf
+- notes: Additional signatures candidate specification.
+- use_for:
+  - candidate algorithm overview
+  - candidate-specific parameters only when directly extracted
+  - teaching comparisons among additional signature families
+- do_not_use_for:
+  - claiming this candidate is standardized
+  - performance or security ranking without source
+  - hardware benchmark numbers unless a benchmark table is cited
+### QR-UOV_v2.0_specification_2025.pdf
+- file: `04_nist_additional_signatures_round3/QR-UOV_v2.0_specification_2025.pdf`
+- type: `nist_additional_signature_candidate_specification`
+- trust_tier: **Tier 1**
+- pages: 58
+- size_bytes: 609610
+- sha256: `a0abd8935a793f40be904c4e583f71626d439641740b657abf0cd9d5f1f91558`
+- source_url: https://www.pqov.org/qr-uov-specification.pdf
+- notes: Additional signatures candidate specification.
+- use_for:
+  - candidate algorithm overview
+  - candidate-specific parameters only when directly extracted
+  - teaching comparisons among additional signature families
+- do_not_use_for:
+  - claiming this candidate is standardized
+  - performance or security ranking without source
+  - hardware benchmark numbers unless a benchmark table is cited
+### SDitH_round2_specification_2025.pdf
+- file: `04_nist_additional_signatures_round3/SDitH_round2_specification_2025.pdf`
+- type: `nist_additional_signature_candidate_specification`
+- trust_tier: **Tier 1**
+- pages: 50
+- size_bytes: 575582
+- sha256: `72b47d88c21b92078e24da65b05e957759ab197f51368bef98828c14260f116b`
+- source_url: https://csrc.nist.gov/CSRC/media/Projects/pqc-dig-sig/documents/round-2/spec-files/SDitH-spec-web.pdf
+- notes: Additional signatures candidate specification.
+- use_for:
+  - candidate algorithm overview
+  - candidate-specific parameters only when directly extracted
+  - teaching comparisons among additional signature families
+- do_not_use_for:
+  - claiming this candidate is standardized
+  - performance or security ranking without source
+  - hardware benchmark numbers unless a benchmark table is cited
+### SNOVA_round2_specification_2025.pdf
+- file: `04_nist_additional_signatures_round3/SNOVA_round2_specification_2025.pdf`
+- type: `nist_additional_signature_candidate_specification`
+- trust_tier: **Tier 1**
+- pages: 67
+- size_bytes: 505505
+- sha256: `7266dc2a8de1cfcf34f6933e0d6c886b9b23affd19ac88a270bc54b1ea59ba6e`
+- source_url: https://csrc.nist.gov/CSRC/media/Projects/pqc-dig-sig/documents/round-2/spec-files/SNOVA-spec-web.pdf
+- notes: Additional signatures candidate specification.
+- use_for:
+  - candidate algorithm overview
+  - candidate-specific parameters only when directly extracted
+  - teaching comparisons among additional signature families
+- do_not_use_for:
+  - claiming this candidate is standardized
+  - performance or security ranking without source
+  - hardware benchmark numbers unless a benchmark table is cited
+### SQIsign_v2.0.1_specification_2025.pdf
+- file: `04_nist_additional_signatures_round3/SQIsign_v2.0.1_specification_2025.pdf`
+- type: `nist_additional_signature_candidate_specification`
+- trust_tier: **Tier 1**
+- pages: 104
+- size_bytes: 1087080
+- sha256: `14d12225da23a8bb6b1b8fcb13ee4a083bcef9ff7582c9204c342f51c0c86dbd`
+- source_url: https://sqisign.org/wp-content/uploads/2025/07/SQIsign-specification.pdf
+- notes: Additional signatures candidate specification.
+- use_for:
+  - candidate algorithm overview
+  - candidate-specific parameters only when directly extracted
+  - teaching comparisons among additional signature families
+- do_not_use_for:
+  - claiming this candidate is standardized
+  - performance or security ranking without source
+  - hardware benchmark numbers unless a benchmark table is cited
+### UOV_round2_specification_2025.pdf
+- file: `04_nist_additional_signatures_round3/UOV_round2_specification_2025.pdf`
+- type: `nist_additional_signature_candidate_specification`
+- trust_tier: **Tier 1**
+- pages: 44
+- size_bytes: 742368
+- sha256: `15839009cf3b1dd4ba4e0e2c07bd9f1443cfd6d3efb31808b7da1afd79647f99`
+- source_url: https://csrc.nist.gov/CSRC/media/Projects/pqc-dig-sig/documents/round-2/spec-files/UOV-spec-web.pdf
+- notes: Additional signatures candidate specification.
+- use_for:
+  - candidate algorithm overview
+  - candidate-specific parameters only when directly extracted
+  - teaching comparisons among additional signature families
+- do_not_use_for:
+  - claiming this candidate is standardized
+  - performance or security ranking without source
+  - hardware benchmark numbers unless a benchmark table is cited
+
+## 05_china_related
+### 基于NTRU的密钥封装机制-征求意见稿.pdf
+- file: `05_china_related/#U57fa#U4e8eNTRU#U7684#U5bc6#U94a5#U5c01#U88c5#U673a#U5236-#U5f81#U6c42#U610f#U89c1#U7a3f.pdf`
+- type: `china_related_algorithm_spec_or_paper`
+- trust_tier: **Tier 2**
+- pages: 59
+- size_bytes: 1443416
+- sha256: `76f0b309c68984c9d1bac8b709045c516d5fa76a72b1733411f982582037e25b`
+- use_for:
+  - China-related PQC algorithm landscape
+  - domestic candidate background
+  - algorithm-specific teaching notes when directly cited
+- do_not_use_for:
+  - claiming NIST standard status
+  - official SM standard status unless separately sourced
+  - exact benchmark data without table/section citation
+### Aigis-enc算法设计文档.pdf
+- file: `05_china_related/Aigis-enc#U7b97#U6cd5#U8bbe#U8ba1#U6587#U6863.pdf`
+- type: `china_related_algorithm_spec_or_paper`
+- trust_tier: **Tier 2**
+- pages: 38
+- size_bytes: 501322
+- sha256: `453d9715ca7b4512c28fbf74df754f2bd6204e3cd2bfa7c991c010d9d04cfdb1`
+- use_for:
+  - China-related PQC algorithm landscape
+  - domestic candidate background
+  - algorithm-specific teaching notes when directly cited
+- do_not_use_for:
+  - claiming NIST standard status
+  - official SM standard status unless separately sourced
+  - exact benchmark data without table/section citation
+### Aigis-sig算法设计文档.pdf
+- file: `05_china_related/Aigis-sig#U7b97#U6cd5#U8bbe#U8ba1#U6587#U6863.pdf`
+- type: `china_related_algorithm_spec_or_paper`
+- trust_tier: **Tier 2**
+- pages: 55
+- size_bytes: 543810
+- sha256: `e6931fcb72380aedf84849c25fbbc20ad62a5857b32b5b3799c09d774d1a6c07`
+- use_for:
+  - China-related PQC algorithm landscape
+  - domestic candidate background
+  - algorithm-specific teaching notes when directly cited
+- do_not_use_for:
+  - claiming NIST standard status
+  - official SM standard status unless separately sourced
+  - exact benchmark data without table/section citation
+### Aigis.pdf
+- file: `05_china_related/Aigis.pdf`
+- type: `china_related_algorithm_spec_or_paper`
+- trust_tier: **Tier 2**
+- pages: 41
+- size_bytes: 513248
+- sha256: `c3e324ac3fe85ddd1082eb03f64176016aa3faa69f21570dcdfb6b8a8ef23a27`
+- use_for:
+  - China-related PQC algorithm landscape
+  - domestic candidate background
+  - algorithm-specific teaching notes when directly cited
+- do_not_use_for:
+  - claiming NIST standard status
+  - official SM standard status unless separately sourced
+  - exact benchmark data without table/section citation
+### CTRU.pdf
+- file: `05_china_related/CTRU.pdf`
+- type: `china_related_algorithm_spec_or_paper`
+- trust_tier: **Tier 2**
+- pages: 30
+- size_bytes: 791009
+- sha256: `82b8c8be910d37e103a4704375482a1550a81045fcd56813b58ac01f7019ee22`
+- use_for:
+  - China-related PQC algorithm landscape
+  - domestic candidate background
+  - algorithm-specific teaching notes when directly cited
+- do_not_use_for:
+  - claiming NIST standard status
+  - official SM standard status unless separately sourced
+  - exact benchmark data without table/section citation
+### LAC_NIST_round1_official_comment_2018.pdf
+- file: `05_china_related/LAC_NIST_round1_official_comment_2018.pdf`
+- type: `nist_submission_comment`
+- trust_tier: **Tier 2**
+- pages: 61
+- size_bytes: 2175794
+- sha256: `7f7b89162347324ea4605fcf1ef454b9d81a8945ab0cd66b0e3457f89e9d42fd`
+- source_url: https://csrc.nist.gov/CSRC/media/Projects/Post-Quantum-Cryptography/documents/round-1/official-comments/LAC-official-comment.pdf
+- notes: NIST Round 1 official comment related to LAC.
+- use_for:
+  - China-related PQC algorithm landscape
+  - domestic candidate background
+  - algorithm-specific teaching notes when directly cited
+- do_not_use_for:
+  - claiming NIST standard status
+  - official SM standard status unless separately sourced
+  - exact benchmark data without table/section citation
+### NEV.pdf
+- file: `05_china_related/NEV.pdf`
+- type: `china_related_algorithm_spec_or_paper`
+- trust_tier: **Tier 2**
+- pages: 33
+- size_bytes: 556806
+- sha256: `2f759d69f8989454122bd9d354dc5830ba97e411674a6b67686c7150838e0fff`
+- use_for:
+  - China-related PQC algorithm landscape
+  - domestic candidate background
+  - algorithm-specific teaching notes when directly cited
+- do_not_use_for:
+  - claiming NIST standard status
+  - official SM standard status unless separately sourced
+  - exact benchmark data without table/section citation
+### PQC_in_China_and_Tongsuo_OpenSSLConf_2025.pdf
+- file: `05_china_related/PQC_in_China_and_Tongsuo_OpenSSLConf_2025.pdf`
+- type: `china_pqc_survey_or_presentation`
+- trust_tier: **Tier 2**
+- pages: 54
+- size_bytes: 2223758
+- sha256: `9a2bca12cb6857e0ae46b0cd0b2ab2a0ff209616a6c265fff41803c67ef4ba7c`
+- source_url: https://openssl-corporation.org/wp-content/uploads/2025/10/ryan-tsa_OpenSSL-Conference-2025-PQC-in-China-and-Tongsuo.pdf
+- notes: OpenSSL Conference 2025 presentation on PQC in China and Tongsuo.
+- use_for:
+  - China-related PQC algorithm landscape
+  - domestic candidate background
+  - algorithm-specific teaching notes when directly cited
+- do_not_use_for:
+  - claiming NIST standard status
+  - official SM standard status unless separately sourced
+  - exact benchmark data without table/section citation
+### Research_of_PQC_in_China_ETSI_2018.pdf
+- file: `05_china_related/Research_of_PQC_in_China_ETSI_2018.pdf`
+- type: `china_pqc_survey_or_presentation`
+- trust_tier: **Tier 2**
+- pages: 29
+- size_bytes: 3044694
+- sha256: `abec392a4515cacab44b4796a1ab872913eaa7038db6b1ac86955613160fb3dd`
+- source_url: https://docbox.etsi.org/Workshop/2018/201811_ETSI_IQC_QUANTUMSAFE/EXECUTIVETRACK/JING_CHINESEACCADEMYOFSCIENCE.pdf
+- notes: ETSI workshop presentation on PQC research in China.
+- use_for:
+  - China-related PQC algorithm landscape
+  - domestic candidate background
+  - algorithm-specific teaching notes when directly cited
+- do_not_use_for:
+  - claiming NIST standard status
+  - official SM standard status unless separately sourced
+  - exact benchmark data without table/section citation
+### Scloud+.pdf
+- file: `05_china_related/Scloud+.pdf`
+- type: `china_related_algorithm_spec_or_paper`
+- trust_tier: **Tier 2**
+- pages: 29
+- size_bytes: 612538
+- sha256: `45a2f08c562dcc483727ba79e44842d4732c5bd46143de75e07d9c8ef18dcc8f`
+- use_for:
+  - China-related PQC algorithm landscape
+  - domestic candidate background
+  - algorithm-specific teaching notes when directly cited
+- do_not_use_for:
+  - claiming NIST standard status
+  - official SM standard status unless separately sourced
+  - exact benchmark data without table/section citation
+
+## 06_general_surveys
+### Critical_Infrastructures_PQC_Perspective_arXiv_2024.pdf
+- file: `06_general_surveys/Critical_Infrastructures_PQC_Perspective_arXiv_2024.pdf`
+- type: `survey_or_guide`
+- trust_tier: **Tier 3**
+- pages: 27
+- size_bytes: 1214747
+- sha256: `80ca7af7ff5ac49f169c86456866e3d79b992c1aec2dde1eeb7822dd3a9e98ba`
+- source_url: https://arxiv.org/pdf/2401.03780
+- notes: PQC perspective for critical infrastructures.
+- use_for:
+  - high-level survey
+  - background reading
+  - teaching intuition
+- do_not_use_for:
+  - exact parameter or benchmark facts unless independently verified from primary source
+### NIST_CSWP_Getting_Ready_for_PQC_2021.pdf
+- file: `06_general_surveys/NIST_CSWP_Getting_Ready_for_PQC_2021.pdf`
+- type: `survey_or_guide`
+- trust_tier: **Tier 3**
+- pages: 10
+- size_bytes: 411227
+- sha256: `253c94e44a75e93e78fe6a97d7d68b97f17083bdb7a24ba3d1292247b84a4f1f`
+- source_url: https://nvlpubs.nist.gov/nistpubs/CSWP/NIST.CSWP.04282021.pdf
+- notes: NIST migration/adoption white paper.
+- use_for:
+  - high-level survey
+  - background reading
+  - teaching intuition
+- do_not_use_for:
+  - exact parameter or benchmark facts unless independently verified from primary source
+### Post_Quantum_Cryptography_Comprehensive_Guide_CNLab_2025.pdf
+- file: `06_general_surveys/Post_Quantum_Cryptography_Comprehensive_Guide_CNLab_2025.pdf`
+- type: `survey_or_guide`
+- trust_tier: **Tier 3**
+- pages: 48
+- size_bytes: 2677362
+- sha256: `3bee012a1504a586d95ad2cb05c6a4d7c3288e3cf85e919d4e0c30e9e17fbdd2`
+- source_url: https://www.cnlab.ch/fileadmin/documents/Publikationen/2025/Post-Quantum_Cryptography_-__A_Comprehensive_Guide.pdf
+- notes: General PQC guide.
+- use_for:
+  - high-level survey
+  - background reading
+  - teaching intuition
+- do_not_use_for:
+  - exact parameter or benchmark facts unless independently verified from primary source
