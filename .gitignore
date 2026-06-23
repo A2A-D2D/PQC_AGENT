@@ -1,0 +1,178 @@
+# ============================================================
+
+# PQC_AGENT .gitignore
+
+# Keep: markdown database, prompts, skills, metadata, scripts
+
+# Ignore: raw PDFs, local vector DB, cache, secrets, temp files
+
+# ============================================================
+
+# ------------------------------------------------------------
+
+# Raw PDF / original documents
+
+# ------------------------------------------------------------
+
+*.pdf
+*.PDF
+
+# If this directory stores original downloaded papers/specs,
+
+# keep it local and do not upload to GitHub.
+
+offical/
+official/
+data/raw_pdf/
+data/raw/
+raw_pdf/
+papers/
+pdfs/
+corpus/raw/
+
+# Keep directory placeholders if needed
+
+!offical/.gitkeep
+!official/.gitkeep
+!data/raw_pdf/.gitkeep
+!data/raw/.gitkeep
+!raw_pdf/.gitkeep
+!papers/.gitkeep
+!pdfs/.gitkeep
+!corpus/raw/.gitkeep
+
+# ------------------------------------------------------------
+
+# Large local databases / vector indexes
+
+# ------------------------------------------------------------
+
+*.faiss
+*.index
+*.ann
+*.hnsw
+*.pkl
+*.pickle
+*.db
+*.sqlite
+*.sqlite3
+
+chroma/
+.chroma/
+vector_db/
+.vector_db/
+embeddings/
+.embedding_cache/
+index_store/
+llama_index_storage/
+storage/
+
+# ------------------------------------------------------------
+
+# LLM / agent local runtime files
+
+# ------------------------------------------------------------
+
+.claude/local/
+.claude/cache/
+.claude/tmp/
+.claude/logs/
+
+.agent_cache/
+.cache/
+tmp/
+temp/
+logs/
+*.log
+
+# ------------------------------------------------------------
+
+# Secrets / environment variables
+
+# ------------------------------------------------------------
+
+.env
+.env.*
+!.env.example
+
+*.key
+*.pem
+*.token
+secrets.json
+credentials.json
+config.local.json
+
+# ------------------------------------------------------------
+
+# Python cache / virtual environment
+
+# ------------------------------------------------------------
+
+**pycache**/
+*.py[cod]
+*$py.class
+
+.venv/
+venv/
+env/
+ENV/
+
+pip-wheel-metadata/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.ipynb_checkpoints/
+
+# ------------------------------------------------------------
+
+# Node / frontend cache, if a web UI is added later
+
+# ------------------------------------------------------------
+
+node_modules/
+dist/
+build/
+.next/
+.nuxt/
+.vite/
+
+# ------------------------------------------------------------
+
+# Archives / temporary packages
+
+# ------------------------------------------------------------
+
+*.zip
+*.rar
+*.7z
+*.tar
+*.tar.gz
+*.tgz
+
+# ------------------------------------------------------------
+
+# OS / editor files
+
+# ------------------------------------------------------------
+
+.DS_Store
+Thumbs.db
+desktop.ini
+
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# ------------------------------------------------------------
+
+# Generated reports / exports
+
+# ------------------------------------------------------------
+
+reports/
+exports/
+outputs/
+generated/
+*.html
+*.tmp
